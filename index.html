@@ -11,25 +11,40 @@
 
   <main class="contenedor-formulario">
     <section class="tarjeta">
-      <h2><i class="fas fa-user-circle"></i> Registro de Usuario</h2>
+      <h2><i class="fas fa-user-circle"></i> 🌸Registro de Usuario🌸</h2>
       <form id="formularioAvanzado">
 
         <div class="campo">
-          <label for="nombreCompleto"><i class="fas fa-user"></i> Nombre completo:</label>
-          <input type="text" id="nombreCompleto" name="nombreCompleto" />
+          <label for="Nombre"><i class="fas fa-user"></i> 👤 Nombres:</label>
+          <input type="text" id="Nombre" name="Nombre" />
           <span id="errorNombre" class="mensaje-error"></span>
           <span id="exitoNombre" class="mensaje-exito"></span>
+        
+        </div>
+        <div class="campo">
+          <label for="apellidos"><i class="fas fa-user-tag"></i> 👤 Apellidos:</label>
+          <input type="text" id="apellidos" name="apellidos" />
+          <span id="errorApellidos" class="mensaje-error"></span>
+          <span id="exitoApellidos" class="mensaje-exito"></span>
         </div>
 
+
         <div class="campo">
-          <label for="correo"><i class="fas fa-envelope"></i> Correo electrónico:</label>
+          <label for="correo"><i class="fas fa-envelope"></i> 📨 Correo electrónico:</label>
           <input type="email" id="correo" name="correo" />
           <span id="errorCorreo" class="mensaje-error"></span>
           <span id="exitoCorreo" class="mensaje-exito"></span>
         </div>
+       <div class="campo">
+          <label for="confirmarCorreo"><i class="fas fa-envelope-open-text"></i>  📨 Confirmar correo electrónico:</label>
+          <input type="email" id="confirmarCorreo" name="confirmarCorreo" />
+          <span id="errorConfirmarCorreo" class="mensaje-error"></span>
+          <span id="exitoConfirmarCorreo" class="mensaje-exito"></span>
+        </div>
+
 
         <div class="campo">
-          <label for="password"><i class="fas fa-lock"></i> Contraseña:</label>
+          <label for="password"><i class="fas fa-lock"></i> 📎 Contraseña:</label>
           <input type="password" id="password" name="password" />
           <div id="strengthBar" class="password-strength"></div>
           <span id="errorPassword" class="mensaje-error"></span>
@@ -37,34 +52,34 @@
         </div>
 
         <div class="campo">
-          <label for="confirmarPassword"><i class="fas fa-lock"></i> Confirmar contraseña:</label>
+          <label for="confirmarPassword"><i class="fas fa-lock"></i> 📎 Confirmar contraseña:</label>
           <input type="password" id="confirmarPassword" name="confirmarPassword" />
           <span id="errorConfirmar" class="mensaje-error"></span>
           <span id="exitoConfirmar" class="mensaje-exito"></span>
         </div>
 
         <div class="campo">
-          <label for="telefono"><i class="fas fa-phone"></i> Teléfono:</label>
+          <label for="telefono"><i class="fas fa-phone"></i> 📞  Teléfono:</label>
           <input type="text" id="telefono" name="telefono" />
           <span id="errorTelefono" class="mensaje-error"></span>
           <span id="exitoTelefono" class="mensaje-exito"></span>
         </div>
 
         <div class="campo">
-          <label for="fechaNacimiento"><i class="fas fa-calendar-alt"></i> Fecha de nacimiento:</label>
+          <label for="fechaNacimiento"><i class="fas fa-calendar-alt"></i> 📆 Fecha de nacimiento:</label>
           <input type="date" id="fechaNacimiento" name="fechaNacimiento" />
           <span id="errorFecha" class="mensaje-error"></span>
           <span id="exitoFecha" class="mensaje-exito"></span>
         </div>
 
         <div class="campo">
-          <label for="comentarios"><i class="fas fa-comment-dots"></i> Comentarios (opcional):</label>
+          <label for="comentarios"><i class="fas fa-comment-dots"></i>  📃 Comentarios (opcional):</label>
           <textarea id="comentarios" name="comentarios" maxlength="500"></textarea>
           <small>Caracteres: <span id="contadorComentarios">0</span></small>
         </div>
 
         <div class="campo">
-          <label><input type="checkbox" id="terminos" name="terminos" /> Acepto los términos y condiciones</label>
+          <label><input type="checkbox" id="terminos" name="terminos" />  📌 Acepto los términos y condiciones</label>
           <span id="errorTerminos" class="mensaje-error"></span>
         </div>
 

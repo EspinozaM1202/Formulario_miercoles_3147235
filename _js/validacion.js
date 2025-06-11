@@ -15,14 +15,14 @@ campos.forEach((campo) => {
 // 🎯  VALIDACIONES ESPECÍFICAS POR CAMPO
 
 // Validación del nombre
-document.getElementById('nombreCompleto').addEventListener('input', function () {
+document.getElementById('Nombre').addEventListener('input', function () {
   const valor = this.value.trim();
   const nombres = valor.split(' ').filter((nombre) => nombre.length > 0);
 
   if (valor.length < 3) {
     mostrarError('errorNombre', 'El nombre debe tener al menos 3 caracteres');
     marcarCampo(this, false);
-  } else if (nombres.length < 2) {
+  } else if (nombres.length < 1) {
     mostrarError('errorNombre', 'Ingresa al menos 2 nombres');
     marcarCampo(this, false);
   } else {
@@ -30,6 +30,23 @@ document.getElementById('nombreCompleto').addEventListener('input', function () 
     marcarCampo(this, true);
   }
 });
+// Validación de apellidos
+document.getElementById('apellidos').addEventListener('input', function () {
+  const valor = this.value.trim();
+  const partes = valor.split(' ').filter(p => p.length > 0);
+
+  if (valor.length < 3) {
+    mostrarError('errorApellidos', 'El apellido debe tener al menos 3 caracteres');
+    marcarCampo(this, false);
+  } else if (partes.length < 1) {
+    mostrarError('errorApellidos', 'Ingresa al menos un apellido');
+    marcarCampo(this, false);
+  } else {
+    mostrarExito('exitoApellidos', '✓ Apellido válido');
+    marcarCampo(this, true);
+  }
+});
+
 
 // Validación del email
 document.getElementById('correo').addEventListener('input', function () {
@@ -43,6 +60,19 @@ document.getElementById('correo').addEventListener('input', function () {
     marcarCampo(this, true);
   }
 });
+// Validación de confirmación de correo
+document.getElementById('confirmarCorreo').addEventListener('input', function () {
+  const correo = document.getElementById('correo').value;
+
+  if (this.value !== correo) {
+    mostrarError('errorConfirmarCorreo', 'Los correos no coinciden');
+    marcarCampo(this, false);
+  } else if (this.value.length > 0) {
+    mostrarExito('exitoConfirmarCorreo', '✓ Correos coinciden');
+    marcarCampo(this, true);
+  }
+});
+
 
 // Validación de contraseña con indicador de fortaleza
 document.getElementById('password').addEventListener('input', function () {
