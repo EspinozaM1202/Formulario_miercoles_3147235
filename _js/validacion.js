@@ -15,7 +15,7 @@ campos.forEach((campo) => {
 // 🎯  VALIDACIONES ESPECÍFICAS POR CAMPO
 
 // Validación del nombre
-document.getElementById('Nombre').addEventListener('input', function () {
+document.getElementById('nombre').addEventListener('input', function () {
   const valor = this.value.trim();
   const nombres = valor.split(' ').filter((nombre) => nombre.length > 0);
 

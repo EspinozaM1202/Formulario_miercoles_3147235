@@ -15,8 +15,8 @@
       <form id="formularioAvanzado">
 
         <div class="campo">
-          <label for="Nombre"><i class="fas fa-user"></i> 👤 Nombres:</label>
-          <input type="text" id="Nombre" name="Nombre" />
+          <label for="nombre"><i class="fas fa-user"></i> 👤 Nombres:</label>
+          <input type="text" id="nombre" name="nombre" />
           <span id="errorNombre" class="mensaje-error"></span>
           <span id="exitoNombre" class="mensaje-exito"></span>
         
@@ -89,18 +89,17 @@
         </div>
 
         <div class="botones">
-          <button type="submit" id="btnEnviar" disabled>Enviar</button>
           <button type="button" onclick="reiniciarFormulario()">Reiniciar</button>
+          <button type="submit" id="btnEnviar" disabled>Enviar</button>
         </div>
       </form>
     </section>
-
     <section class="tarjeta resumen" id="resumenDatos" style="display: none;">
       <h3><i class="fas fa-check-circle"></i> Resumen del formulario</h3>
       <div id="contenidoResumen"></div>
     </section>
   </main>
 
-  <script src="_js/validacion.js"></script>
+  <script src="./_js/validacion.js"></script>
 </body>
 </html>
